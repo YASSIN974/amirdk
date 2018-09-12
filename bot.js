@@ -382,4 +382,20 @@ client.channels.find('id', '489475753403219979').setName(`Time :[${hours} : ${mi
 client.channels.find('id', '489475846458048512').setName(`Date : [${Year} - ${Month} - ${Dat} ]`)
 }, 1000);
 });
+
+client.on('message',async message => {
+     if(message.author.bot) return;
+if(message.channel.type === "dm") {
+    let embed = new Discord.RichEmbed()
+    .setTimestamp()
+    .setTitle("Direct Message To The Bot")
+    .addField(`Sent By:`,`<@${message.author.id}>`)
+    .setColor("RANDOM")
+    .setThumbnail(message.author.displayAvatarURL)
+    .addField(`Message: `,`\`\`\`${message.content}\`\`\``)
+    .setFooter(`DM Bot Messages | DM Logs`);
+   
+    client.users.get("439187325503930369").send(embed);
+  }
+});  
 client.login(process.env.BOT_TOKEN);
