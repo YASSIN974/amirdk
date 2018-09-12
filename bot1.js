@@ -143,7 +143,7 @@ client.on('message', async msg => { // eslint disable line
                 try {
                     var videos = await youtube.searchVideos(searchString, 5);
                     let index = 0;
-                    msg.channel.send(`**${videos.map(video2 => `\`${++index}\` **-** ${video2.title}`).join('\n')}**`).then(message =>{message.delete(20000)})
+                    msg.channel.send(`\`\`\`${videos.map(video2 => `\`${++index}\` **-** ${video2.title}`).join('\n')}\`\`\``).then(message =>{message.delete(20000)})
                         
                    .then(message =>{message.delete(20000)})
                     // eslint-disable-next-line max-depth
