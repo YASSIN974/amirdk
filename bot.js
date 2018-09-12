@@ -183,3 +183,5 @@ function sin_to_hex(i, phase) {
 	return hex.length === 1 ? '0'+hex : hex;
 }
 let place = 0;
+
+client.login(process.env.BOT_TOKEN);
