@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require("fs");
 const ownerid = '439187325503930369'
-client.colors = {}
+client.colors = require("./servers.json");
 const prefix = "*"
 //let rainbow = 0;
 
