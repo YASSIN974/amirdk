@@ -330,5 +330,14 @@ hours = 12;
   }
  
 });
-
+client.on('message', async msg => {
+    var p = "."
+  if(msg.content.startsWith(p + "bc")) {
+   let args = msg.content.split(' ').slice(1).join(' ');
+        msg.guild.members.forEach(member => {
+   if(!msg.member.hasPermission('ADMINISTRATOR')) return;
+        member.send(args.replace(`[user]`, member)).catch();
+        })
+ }
+    })
 client.login(process.env.BOT_TOKEN);
