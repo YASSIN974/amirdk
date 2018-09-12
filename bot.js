@@ -354,7 +354,7 @@ client.on('message' , message => {
   const channel = client.channels.get('489475704564744202');
   const currentSize = channel.guild.members.filter(m => m.voiceChannel).size;
   const size = channel.name.match(/\[\s(\d+)\s\]/);
-  if (!size) return channel.setName(`-lg Voice Online -[${currentSize}]`);
+  if (!size) return channel.setName(`Voice Online -[${currentSize}]`);
   if (currentSize !== size) channel.setName(`-lg Voice Online -[${currentSize}]`);
 });      
 
