@@ -24,10 +24,7 @@ client.on('ready', () => {
     console.log(`[Codes] ${client.users.size}`)
     client.user.setStatus("idle")
 });
-client.on('ready', () => {
-     client.user.setActivity("Type splay",{type: 'WATCHING'});
 
-});
 const prefix = "s"
 client.on('message', async msg => {
 	if (msg.author.bot) return undefined;
