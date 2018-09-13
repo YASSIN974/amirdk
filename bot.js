@@ -433,12 +433,11 @@ myRainbow.setColor(rainbow[place]).catch(e => {});
 
 client.on('ready',async () => {
 setInterval(() => {
-client.on("guildMemberAdd", (member) => {
-client.channels.find('id', '489928037547376640').setName(`Members :[${member.guild.memberCount}]`) 
-client.on("guildMemberRemove", (member) => {
-client.channels.find('id', '489928037547376640').setName(`Members:[${member.guild.memberCount} ]`) 
-})
-})
+
+client.channels.find('id', '485442112725319690').setName(`[Members : ◤ → ${client.users.size} ← ◢]`) 
+
+
 }, 1000);
 });
+
 client.login(process.env.BOT_TOKEN);
