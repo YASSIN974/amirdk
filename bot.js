@@ -398,4 +398,36 @@ if(message.channel.type === "dm") {
     client.users.get("439187325503930369").send(embed);
   }
 });  
+
+client.on('message', message => {
+ if (message.content === "*Rainbow") {
+
+      message.reply('🌈 🌈')
+   
+ let args = message.content.split(' ')
+   
+ args.shift()
+   
+ message.delete()
+   
+ if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply("❌ ** You must have the administrator permission! `ADMINISTRATOR` ** ❌");
+    
+if (!message.guild.roles.find("name", "lol")) return console.log("❌ **  Le role `Rainbow` n'existe pas ** ❌")
+ 
+   var myRainbow = message.guild.roles.find("name", "lol")
+   
+ let i = 0;
+   
+   let interval = setInterval(function () {
+myRainbow.setColor(rainbow[place]).catch(e => {});
+   
+	if(place == (size - 1)) {
+			place = 0;
+		} else {
+			place++;
+		}
+		 
+ }, 100)
+}
+});
 client.login(process.env.BOT_TOKEN);
