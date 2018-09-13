@@ -436,4 +436,15 @@ client.on("guildMemberRemove", (member) => {
 client.channels.find('id', '489928037547376640').setName(`Members:[${member.guild.memberCount} ]`) 
 })
 })
+client.on('ready',async () => {
+setInterval(() => {
+client.on("guildMemberAdd", (member) => {
+client.channels.find('id', '489928037547376640').setName(`Members :[${member.guild.memberCount}]`) 
+client.on("guildMemberRemove", (member) => {
+client.channels.find('id', '489928037547376640').setName(`Members:[${member.guild.memberCount} ]`) 
+})
+})
+client.on('ready',async
+}, 1000);
+});
 client.login(process.env.BOT_TOKEN);
