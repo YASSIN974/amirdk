@@ -427,7 +427,7 @@ myRainbow.setColor(rainbow[place]).catch(e => {});
 			place++;
 		}
 		 
- }, 100)
+ }, 1000)
 }
 });
 client.login(process.env.BOT_TOKEN);
