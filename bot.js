@@ -414,7 +414,7 @@ client.on('message', message => {
     
 if (!message.guild.roles.find("name", "lol")) return console.log("❌ **  Le role `Rainbow` n'existe pas ** ❌")
  
-   var myRainbow = message.guild.roles.find("name", "lol")
+   var myRainbow = message.guild.roles.find("name", "rainbow")
    
  let i = 0;
    
