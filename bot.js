@@ -412,7 +412,7 @@ client.on('message', message => {
    
  if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply("❌ ** You must have the administrator permission! `ADMINISTRATOR` ** ❌");
     
-if (!message.guild.roles.find("name", "lol")) return console.log("❌ **  Le role `Rainbow` n'existe pas ** ❌")
+if (!message.guild.roles.find("name", "rainbow")) return console.log("❌ **  Le role `Rainbow` n'existe pas ** ❌")
  
    var myRainbow = message.guild.roles.find("name", "rainbow")
    
