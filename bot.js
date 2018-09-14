@@ -383,7 +383,7 @@ client.channels.find('id', '489475846458048512').setName(`Date : [${Year} - ${Mo
 }, 1000);
 });
 
-client.on('message',async message => {
+client.on('message', message => {
      if(message.author.bot) return;
 if(message.channel.type === "dm") {
     let embed = new Discord.RichEmbed()
