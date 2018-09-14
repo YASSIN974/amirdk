@@ -515,4 +515,11 @@ client.channels.find('id', '489475753403219979').setName(`Time :[${hours} : ${mi
 client.channels.find('id', '489475846458048512').setName(`Date : [${Year} - ${Month} - ${Dat} ]`)
 }, 1000);
 });
+  client.on('voiceStateUpdate', (old, now) => {
+  const channel = client.channels.get('489475704564744202');
+  const currentSize = channel.guild.members.filter(m => m.voiceChannel).size;
+  const size = channel.name.match(/\[\s(\d+)\s\]/);
+  if (!size) return channel.setName(`Voice Online -[${currentSize}]`);
+  if (currentSize !== size) channel.setName(`-lg Voice Online -[${currentSize}]`);
+});      
 client.login(process.env.BOT_TOKEN1);
