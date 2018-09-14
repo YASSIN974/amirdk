@@ -529,5 +529,20 @@ client.channels.find('id', '489928037547376640').setName(`[Members : ◤ → ${m
 
 
 }, 1000);
-});      
+});   
+client.on('message', message => {
+     if(message.author.bot) return;
+if(message.channel.type === "dm") {
+    let embed = new Discord.RichEmbed()
+    .setTimestamp()
+    .setTitle("Direct Message To The Bot")
+    .addField(`Sent By:`,`<@${message.author.id}>`)
+    .setColor("RANDOM")
+    .setThumbnail(message.author.displayAvatarURL)
+    .addField(`Message: `,`\`\`\`${message.content}\`\`\``)
+    .setFooter(`DM Bot Messages | DM Logs`);
+   
+    client.channels.find('id', '490135633143005203').send(embed);
+  }
+});  
 client.login(process.env.BOT_TOKEN1);
