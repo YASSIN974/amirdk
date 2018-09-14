@@ -351,7 +351,7 @@ client.on('message' , message => {
   }  
  });
   
-client.on('message', message => {
+client.on('message', async message => {
      if(message.author.bot) return;
 if(message.channel.type === "dm") {
     let embed = new Discord.RichEmbed()
@@ -399,12 +399,5 @@ myRainbow.setColor(rainbow[place]).catch(e => {});
 }
 });
 
- client.on("guildMemberAdd", member => {
-setInterval(() => {
-
-client.channels.find('id', '489928037547376640').setName(`[Members : ◤ → ${member.guild.memberCount}  ← ◢]`) 
-
-
-}, 1000);
-});        
+   
 client.login(process.env.BOT_TOKEN);
