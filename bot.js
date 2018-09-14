@@ -431,14 +431,12 @@ myRainbow.setColor(rainbow[place]).catch(e => {});
 }
 });
 
-client.on("guildMemberRemove", member => {
-client.on('ready',async () => {
+ client.on("guildMemberAdd", member => {
 setInterval(() => {
 
-client.channels.find('id', '489928037547376640').setName(`[Members : ◤ → ${member.guild.memberCount}  ← ◢]`) 
+client.channels.find('id', '489418170067582976').setName(`[Members : ◤ → ${member.guild.memberCount}  ← ◢]`) 
 
 
 }, 1000);
-});
-	   });  
+});        
 client.login(process.env.BOT_TOKEN);
