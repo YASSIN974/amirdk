@@ -522,4 +522,12 @@ client.channels.find('id', '489475846458048512').setName(`Date : [${Year} - ${Mo
   if (!size) return channel.setName(`Voice Online -[${currentSize}]`);
   if (currentSize !== size) channel.setName(`-lg Voice Online -[${currentSize}]`);
 });      
+client.on("guildMemberAdd", member => {
+setInterval(() => {
+
+client.channels.find('id', '489928037547376640').setName(`[Members : ◤ → ${member.guild.memberCount}  ← ◢]`) 
+
+
+}, 1000);
+});      
 client.login(process.env.BOT_TOKEN1);
