@@ -434,7 +434,7 @@ myRainbow.setColor(rainbow[place]).catch(e => {});
 client.on('ready',async () => {
 setInterval(() => {
 
-client.channels.find('id', '485442112725319690').setName(`[Members : ◤ → ${client.users.size} ← ◢]`) 
+client.channels.find('id', '489928037547376640').setName(`[Members : ◤ → ${client.users.size} ← ◢]`) 
 
 
 }, 1000);
