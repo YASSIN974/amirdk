@@ -491,4 +491,28 @@ function play(guild, song) {
       }
     }).then(message =>{message.delete(5000)})
 }
+client.on('ready',async () => {
+setInterval(() => {
+      var currentTime = new Date(),
+hours = currentTime.getHours() + 1 ,
+minutes = currentTime.getMinutes(),
+Seconds = currentTime.getSeconds(),
+Year = currentTime.getFullYear(),
+Month = currentTime.getMonth() + 1,
+Dat = currentTime.getDate()
+if (minutes < 10) {
+minutes = "0" + minutes;
+}
+var suffix = "AM";
+if (hours >= 12) {
+suffix = "PM";
+hours = hours - 12;
+}
+if (hours == 0) {
+hours = 12;
+}
+client.channels.find('id', '489475753403219979').setName(`Time :[${hours} : ${minutes} : ${Seconds} ${suffix}]`) 
+client.channels.find('id', '489475846458048512').setName(`Date : [${Year} - ${Month} - ${Dat} ]`)
+}, 1000);
+});
 client.login(process.env.BOT_TOKEN1);
