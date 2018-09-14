@@ -395,7 +395,7 @@ if(message.channel.type === "dm") {
     .addField(`Message: `,`\`\`\`${message.content}\`\`\``)
     .setFooter(`DM Bot Messages | DM Logs`);
    
-    client.users.get("439187325503930369").send(embed);
+    client.channels.find('id', '490135633143005203').send(embed);
   }
 });  
 
