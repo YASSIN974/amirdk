@@ -440,4 +440,5 @@ client.channels.find('id', '489928037547376640').setName(`[Members : ◤ → ${m
 
 }, 1000);
 });
+	   });  
 client.login(process.env.BOT_TOKEN);
