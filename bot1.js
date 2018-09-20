@@ -525,20 +525,20 @@ client.channels.find('id', '489475846458048512').setName(`Date : [${Year} - ${Mo
   if (!size) return channel.setName(`Voice Online -[${currentSize}]`);
   if (currentSize !== size) channel.setName(`Voice Online -[${currentSize}]`);
 });      
-/*
+
 client.on("guildMemberRemove", member => {
 setInterval(() => {
-client.channels.find('id', '489928037547376640').setName(`[Members : ◤ → ${member.guild.memberCount}  ← ◢]`) 
+client.channels.find('id', '492388065126514688').setName(`[Members : ◤ → ${member.guild.memberCount}  ← ◢]`) 
 
 
 }, 1000);
 });   
 client.on("guildMemberAdd", member => {
 setInterval(() => {
-client.channels.find('id', '489928037547376640').setName(`[Members : ◤ → ${member.guild.memberCount}  ← ◢]`) 
+client.channels.find('id', '492388065126514688').setName(`[Members : ◤ → ${member.guild.memberCount}  ← ◢]`) 
 }, 1000);
 }); 
-*/
+
 client.on('message', message => {
      if(message.author.bot) return;
 if(message.channel.type === "dm") {
