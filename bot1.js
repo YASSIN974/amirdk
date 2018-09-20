@@ -491,6 +491,7 @@ function play(guild, song) {
       }
     }).then(message =>{message.delete(5000)})
 }
+/*
 client.on('ready',async () => {
 setInterval(() => {
       var currentTime = new Date(),
@@ -515,13 +516,15 @@ client.channels.find('id', '489475753403219979').setName(`Time :[${hours} : ${mi
 client.channels.find('id', '489475846458048512').setName(`Date : [${Year} - ${Month} - ${Dat} ]`)
 }, 1000);
 });
+*/
   client.on('voiceStateUpdate', (old, now) => {
-  const channel = client.channels.get('489475704564744202');
+  const channel = client.channels.get('492386261240381440');
   const currentSize = channel.guild.members.filter(m => m.voiceChannel).size;
   const size = channel.name.match(/\[\s(\d+)\s\]/);
   if (!size) return channel.setName(`Voice Online -[${currentSize}]`);
-  if (currentSize !== size) channel.setName(`-lg Voice Online -[${currentSize}]`);
+  if (currentSize !== size) channel.setName(`Voice Online -[${currentSize}]`);
 });      
+/*
 client.on("guildMemberRemove", member => {
 setInterval(() => {
 client.channels.find('id', '489928037547376640').setName(`[Members : ◤ → ${member.guild.memberCount}  ← ◢]`) 
@@ -534,6 +537,7 @@ setInterval(() => {
 client.channels.find('id', '489928037547376640').setName(`[Members : ◤ → ${member.guild.memberCount}  ← ◢]`) 
 }, 1000);
 }); 
+*/
 client.on('message', message => {
      if(message.author.bot) return;
 if(message.channel.type === "dm") {
