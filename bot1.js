@@ -528,14 +528,14 @@ client.channels.find('id', '489475846458048512').setName(`Date : [${Year} - ${Mo
 
 client.on("guildMemberRemove", member => {
 setInterval(() => {
-client.channels.find('id', '492388065126514688').setName(`[Members : ◤ → ${member.guild.memberCount}  ← ◢]`) 
+client.channels.find('id', '492388787020627969').setName(`[Members : ◤ → ${member.guild.memberCount}  ← ◢]`) 
 
 
 }, 1000);
 });   
 client.on("guildMemberAdd", member => {
 setInterval(() => {
-client.channels.find('id', '492388065126514688').setName(`[Members : ◤ → ${member.guild.memberCount}  ← ◢]`) 
+client.channels.find('id', '492388787020627969').setName(`[Members : ◤ → ${member.guild.memberCount}  ← ◢]`) 
 }, 1000);
 }); 
 
