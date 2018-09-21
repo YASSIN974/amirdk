@@ -342,9 +342,8 @@ client.on('message', async msg => {
     })
 
 client.on('message' , message => {
-  var prefix = "*";
   if(message.author.client) return;
-  if(message.content.startsWith(prefix + "ping")) {
+  if(message.content.startsWith(".ping")) {
  message.channel.send('Pong...').then((msg) => {
       msg.edit(`\`\`\`js
 Time taken: ${Date.now() - start} ms
