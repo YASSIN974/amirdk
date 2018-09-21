@@ -398,6 +398,10 @@ myRainbow.setColor(rainbow[place]).catch(e => {});
  }, 1000)
 }
 });
-
+ client.on ("guildMemberAdd", member => {
+  
+   var role = member.guild.roles.find ("name", "Member's 👤");
+   member.addRole (role);
+   });
    
 client.login(process.env.BOT_TOKEN);
