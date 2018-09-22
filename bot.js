@@ -329,7 +329,7 @@ client.on('message', async msg => {
     })
 
 client.on('message' , message => {
-  if(message.content.startsWith(".ping")) {
+  if(message.content.startsWith("*ping")) {
  message.channel.send('Pong...').then((msg) => {
       msg.edit(`\`\`\`javascript\nTime taken: ${msg.createdTimestamp - message.createdTimestamp} ms.\nDiscord API: ${Math.round(client.ping)} ms.\`\`\``);
  })
