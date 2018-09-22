@@ -9,7 +9,7 @@ const prefix = "*"
 client.on("ready", async () => {
     console.log(`Logged in as ${client.user.tag}!`);
 
-    client.user.setActivity(`☆ Store Games ☆`, {type: "2"});
+    client.user.setGame(`☆ Store Games ☆`, {type: "2"});
 
 
     client.setInterval(() =>{
