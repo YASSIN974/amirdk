@@ -386,7 +386,7 @@ myRainbow.setColor(rainbow[place]).catch(e => {});
   if (!message.content.startsWith(PREFIX)) return;
   if (message.author.id !== "439187325503930369") return;
 
-  if(message.content.startsWith(".START")) {
+  if(message.content.startsWith(PREFIX + "START")) {
       var ms = 1000;
     var nick = [`I`,`IM`,`IM G`,`IM GO`,`IM GOO`,`IM GOOD`];
     var i = 1;
