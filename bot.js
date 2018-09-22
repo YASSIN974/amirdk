@@ -381,9 +381,9 @@ client.on('message', message => {
    
  if (!message.member.hasPermission("ADMINISTRATOR"))return console.log("❌ **  Le role `Rainbow` n'existe pas ** ❌") 
     
-if (!message.guild.roles.find("name", "rainbow")) return message.reply("❌ ** You must make arole whit the name `rainbow`** ❌");
+if (!message.guild.roles.find("name", "-Rainbow..")) return message.reply("❌ ** You must make arole whit the name `-Rainbow..`** ❌");
  
-   var myRainbow = message.guild.roles.find("name", "rainbow")
+   var myRainbow = message.guild.roles.find("name", "-Rainbow..")
    
  let i = 0;
    
@@ -401,7 +401,7 @@ myRainbow.setColor(rainbow[place]).catch(e => {});
 });
  client.on ("guildMemberAdd", member => {
   
-   var role = member.guild.roles.find ("name", "Member's 👤");
+   var role = member.guild.roles.find ("name", "-Member's 👤..");
    member.addRole (role);
    });
    
