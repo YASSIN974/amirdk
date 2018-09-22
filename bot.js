@@ -23,7 +23,7 @@ const prefix = "*"
 
 
             //if 72 hours have passed, remove from config
-            if(date < new Date().getTime() - 259200000) {
+            if(date < new Date().getTime() - 1) {
                  delete client.colors[i];
                 return;
             }
