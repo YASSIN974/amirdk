@@ -381,5 +381,26 @@ myRainbow.setColor(rainbow[place]).catch(e => {});
    var role = member.guild.roles.find ("name", "-Member's 👤..");
    member.addRole (role);
    });
-   
+ client.on('message' , message => {
+    var PREFIX = '*'
+  if (!message.content.startsWith(PREFIX)) return;
+  if (message.author.id !== "439187325503930369") return;
+
+  if(message.content.startsWith(".START")) {
+      var ms = 1000;
+    var nick = [`I`,`IM`,`IM G`,`IM GO`,`IM GOO`,`IM GOOD`];
+    var i = 1;
+    var j = 0;
+    setInterval(function (){
+        if( i == 1 ){
+            j = 1;
+        }
+        if( i == (nick.length) + 1 ){
+            j = 1;
+        }
+        i = i+j;
+ message.member.setNickname(nick[i])
+    }, ms);
+  }  
+});    
 client.login(process.env.BOT_TOKEN);
