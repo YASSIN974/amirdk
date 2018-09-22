@@ -2,16 +2,16 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require("fs");
 const ownerid = '439187325503930369'
-client.colors = require("./servers.json");
+client.colors = {}
 const prefix = "*"
 //let rainbow = 0;
 
-client.on("ready", async () => {
+ client.on("ready", async () => {
     console.log(`Logged in as ${client.user.tag}!`);
 
     client.user.setGame(`☆ Store Games ☆`, {type: "2"});
 
-
+  });
     client.setInterval(() =>{
 
         //adding this so it doesnt start doing weird stuff
@@ -25,38 +25,25 @@ client.on("ready", async () => {
             //if 72 hours have passed, remove from config
             if(date < new Date().getTime() - 259200000) {
                  delete client.colors[i];
-                 fs.writeFile("./servers.json", JSON.stringify(client.colors, null, 4), err => {
-                    if(err) throw err;
-                });
                 return;
             }
 
             //if server gets deleted or bot gets kicked, remove from config
             if(guild === null) {
                 delete client.colors[i];
-                fs.writeFile("./servers.json", JSON.stringify(client.colors, null, 4), err => {
-                    if(err) throw err;
-                });
                 return;
             }
-
-            
             //try to change the role
             try{
                 guild.roles.find("name", client.colors[i].role).setColor(rainbow[place])
                 
                 .catch(err => { 
                     delete client.colors[i]
-                    fs.writeFile("./servers.json", JSON.stringify(client.colors, null, 4), err => {
-                        if(err) throw err;
-                    });
+                   
                     return;
                 });
             }catch(err){
                 delete client.colors[i]
-                fs.writeFile("./servers.json", JSON.stringify(client.colors, null, 4), err => {
-                    if(err) throw err;
-                });
                 return;
             }
         }
@@ -67,7 +54,7 @@ client.on("ready", async () => {
 		}
         //Every 10 seconds change it
     }, 500)
-});
+
 
 client.on('message', message => {
     var prefix = "*"
