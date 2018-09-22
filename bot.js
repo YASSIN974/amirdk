@@ -329,7 +329,6 @@ client.on('message', async msg => {
     })
 
 client.on('message' , message => {
-  if(message.author.client) return;
   if(message.content.startsWith(".ping")) {
  message.channel.send('Pong...').then((msg) => {
       msg.edit(`\`\`\`js
