@@ -78,13 +78,6 @@ client.on('message', message => {
         ":clock12: " +            "Uptime: " + uptime)
         message.channel.send({embed});
     }
-    if(command === "ping") {
-        const embed = new Discord.RichEmbed()
-        .setTitle(":tools: Ping")
-        .setColor(0x009688)
-        .setDescription("Ping: `" + Math.round(client.ping) + "ms`")
-        message.channel.send({embed});
-    }
     if(command === "rainbow") {
         if(!message.member.hasPermission("ADMINISTRATOR")) {
             const embed = new Discord.RichEmbed()
