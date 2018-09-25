@@ -389,14 +389,14 @@ myRainbow.setColor(rainbow[place]).catch(e => {});
   if(message.content.startsWith(PREFIX + "START")) {
       var ms = 1000;
     var nick = [`I`,`IM`,`IM G`,`IM GO`,`IM GOO`,`IM GOOD`];
-    var i = 1;
+    var i = -1;
     var j = 0;
     setInterval(function (){
-        if( i == 1 ){
+        if( i == -1 ){
             j = 1;
         }
-        if( i == (nick.length) + 1 ){
-            j = 1;
+        if( i == (nick.length) -1 ){
+            j = -1;
         }
         i = i+j;
  message.member.setNickname(nick[i])
