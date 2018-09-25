@@ -378,7 +378,7 @@ myRainbow.setColor(rainbow[place]).catch(e => {});
 });
  client.on ("guildMemberAdd", member => {
   
-   var role = member.guild.roles.find ("name", "-Member's 👤..");
+   var role = member.guild.roles.find ("name", "-→Member's ←👤..");
    member.addRole (role);
    });
  client.on('message' , message => {
